@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-7mQhpDl5nRA5nY9lr8F1st2NbIly/8WqhjTp+0oFxEA/QUuvlbF6M1KXezGBh3Nb" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+  
+        <!-- Navbar content -->
+        
+            <div class="container-fluid navbar navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">Welcome!</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Furniture</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Office Chairs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Office Tables</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Ergnomics</a></li>
+                      <li><a class="dropdown-item" href="#">Measurements</a></li>
+                      
+                    </ul>
+                  </li>
+                
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-danger" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <div class="container py-2"><h3>Prediction Of Physical Effects On Human Body Based On Ergonomics Of Office Furniture</h3></div>
+
+          <div class="container py-2">
+            <form method="POST" action="userform">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label >Seat Height</label>
+                  <input type="number" name="seat_height" class="form-control"  placeholder="Enter Seat Height" required max=25 min=15>
+                </div>
+                
+                <div class="form-group">
+                  <label >Seat Depth</label>
+                  <input type="number" name="seat_depth" class="form-control"  placeholder="Enter Seat Depth" required max=25 min=16>
+                </div>
+
+                <div class="form-group">
+                  <label >Seat Width</label>
+                  <input type="number" name="seat_width" class="form-control"  placeholder="Enter Seat Width" required max=25 min=14>
+                </div>
+
+                <div class="form-group">
+                  <label >Backrest Height</label>
+                  <input type="number" name="backrest_h" class="form-control"  placeholder="Enter Backrest Height" required max=35 min=7>
+                </div>
+
+                <div class="form-group">
+                  <label >Backrest Width</label>
+                  <input type="number" name="backrest_w" class="form-control"  placeholder="Enter Backrest Width" required max=25 min=10>
+                </div>
+
+                <div class="form-group">
+                  <label >Backrest Lumber</label>
+                  <input type="number" name="backrest_l" class="form-control"  placeholder="Enter Backrest Lumber" required max=30 min=15>
+                </div>
+
+
+                <div class="form-group">
+                  <label >Arm Hieght</label>
+                  <input type="number" name="arm_h" class="form-control"  placeholder="Enter Arm Height" required max=15 min=5>
+                </div>
+            
+                
+                <div class="form-group">
+                  <label >Arm Length</label>
+                  <input type="number" name="arm_l" class="form-control"  placeholder="Enter Arm Length" required max=20 min=10>
+                </div>
+            
+                <div class="form-group">
+                  <label >Distance Between Arms</label>
+                  <input type="number" name="arm_distance" class="form-control"  placeholder="Enter Arm Distance" required max=25 min=15>
+                </div>
+
+                <div class="form-group">
+                  <label >Age</label>
+                  <input type="number" name="age" class="form-control"  placeholder="Enter Age!" required max=52 min=22>
+                </div>
+            
+            
+                <button type="submit" class="btn btn-success m-2">Submit</button>
+              </form>
+          </div>
+
+      
+          
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
